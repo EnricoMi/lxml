@@ -27,7 +27,7 @@ if [ -z "${OS_NAME##ubuntu*}" ]; then
 elif [ -z "${OS_NAME##macos*}" ]; then
   export CC="clang -Wno-deprecated-declarations"
   TEST_CFLAGS="-Og -g -fPIC"
-  EXTRA_CFLAGS="$TEST_CFLAGS -Wall -Wextra"
+  EXTRA_CFLAGS="$TEST_CFLAGS -Wall -Wextra -march=arm64 -march=x86-64"
 fi
 
 # Log versions in use
